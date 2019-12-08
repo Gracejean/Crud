@@ -7,13 +7,13 @@ import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Increment {
+public class Delete_Mysql {
 
-    public void increment() {
-        
-        String query = null;
-        Connection con = null;
-        
+    String query = null;
+    Connection con = null;
+
+    public void delMysql() {
+
         Date date = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat(" dd MMM yyyy HH:mm:ss ");
         String strDate = formatter.format(date);
@@ -25,9 +25,9 @@ public class Increment {
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost/jean", "root", "");
                 stmt = (Statement) con.createStatement();
-                
-                query = "INSERT INTO `increment`(`id`, `col1`, `col2`, `col3`, `col4`, `col5`) VALUES (" + i + "," + (i) + "," + (i + 1) + "," + (i + 2) + "," + (i + 3) + "," + (i + 4) + ")";
-                
+
+                query = "DELETE FROM `increment` WHERE `id` = '" + i + "'";
+
                 stmt.executeUpdate(query);
                 con.close();
 
@@ -44,6 +44,4 @@ public class Increment {
 
     }
 
-    }
-
-
+}
