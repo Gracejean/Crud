@@ -6,12 +6,26 @@ public class Crud {
 
         Increment i = new Increment();
 //        i.increment();
-          i.noConnectionIncrement();
-//        Delete_Mysql d = new Delete_Mysql();
+//          i.noConnectionIncrement();
+          
+        Delete_Mysql d = new Delete_Mysql();
 //        d.delMysql();
-//        Average a = new Average();
-//        a.average();
-
+//        d.noConnetionDel();
+          
+        Average a = new Average();
+//        a.average();  
+//        a.nonSqlAverage();
+        
+        MongoIncrement mongo = new MongoIncrement();
+        mongo.mongoIncrement();
+//        mongo.nonMongoIncrement();
+        
+//        MongoDelete del = new MongoDelete();
+//        del.mongoDel();
+//        del.nonMongoDel();
+        
+        MongoAverage m = new MongoAverage();
+        
     }
 
 }

@@ -19,7 +19,7 @@ public class Increment {
         String strDate = formatter.format(date);
         System.out.println(strDate);
 
-        for (int i = 1; i < 201; i++) {
+        for (int i = 1; i < 1001; i++) {
             try {
                 Statement stmt = null;
                 Class.forName("com.mysql.jdbc.Driver");
@@ -58,7 +58,7 @@ public class Increment {
             con = DriverManager.getConnection("jdbc:mysql://localhost/jean", "root", "");
             stmt = (Statement) con.createStatement();
 
-            for (int i = 1; i < 201; i++) {
+            for (int i = 1; i < 1001; i++) {
 
                 stmt.executeUpdate("INSERT INTO `increment`(`id`, `col1`, `col2`, `col3`, `col4`, `col5`) VALUES (" + i + "," + (i) + "," + (i + 1) + "," + (i + 2) + "," + (i + 3) + "," + (i + 4) + ")");
                System.out.println(i);
