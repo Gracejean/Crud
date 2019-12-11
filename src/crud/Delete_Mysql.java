@@ -22,7 +22,7 @@ public class Delete_Mysql {
         for (int i = 1; i < 201; i++) {
             try {
                 Statement stmt = null;
-                Class.forName("com.mysql.cj.jdbc.Driver");
+                Class.forName("com.mysql.jdbc.Driver");
                 con = DriverManager.getConnection("jdbc:mysql://localhost/jean", "root", "");
                 stmt = (Statement) con.createStatement();
 
@@ -43,5 +43,7 @@ public class Delete_Mysql {
         System.out.println(strDate1);
 
     }
+    
+    public void no
 
 }
